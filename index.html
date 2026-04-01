@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="product">
+        <div class="gallery">
+            <img src="image/photo1.jpg"   id="productImg">
+            <div class="controls">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+        </div>
+
+            <div class="details">
+                <h1>Manchester-United T-Shirt</h1>
+              <h2>$29.99</h2>
+              <h3>30% Off</h3>
+              <p>Stay stylish and support your favorite team with this exclusive Manchester United t-shirt. Perfect  for game days or casual wear.</p>
+
+            
+                 <form>
+                   <div class="size-select">
+                    <p>Choose Size:</p>
+                     <label for="Small">
+                        <input type="radio" name="size" id="Small">
+                       <span>S</span>
+                     </label>
+                     <label for="Medium">
+                        <input type="radio"  name="size" id="Medium">
+                        <span>M</span>
+                     </label>
+                     <label for="Large">
+                        <input type="radio" name="size" id="Large">
+                        <span>L</span>
+                     </label>
+                     <label for="x-large">
+                        <input type="radio" name="size" id="x-large">
+                        <span>XL</span>
+                     </label>
+                     <label for="XX-large">
+                        <input type="radio" id="XXL" name="size" id="XX-large">
+                        <span>XXL</span>
+                     </label>
+                   </div>
+
+
+                   <div class="color-select">
+                     <p>Choose Color:</p>
+                     <label for="Red">
+                        <input type="radio" id="Red" name="color" >
+                        <span class="color-1"></span>
+                     </label>
+                     <label for="Blue">
+                        <input type="radio" id="Blue" name="color" >
+                        <span class="color-2"></span>
+                     </label>
+                     <label for="Green">
+                        <input type="radio" id="Green" name="color" >
+                        <span class="color-3"></span>
+                        <label for="Black">
+                        <input type="radio" id="Black" name="color" >
+                        <span class="color-4"></span>
+                        </label>
+                   </div>
+
+
+                   <div class="quantity-select">
+                     <p>Quantity:</p>
+                     <input type="number" min="1" max="10" value="1">
+                   </div>
+                   <button>BUY NOW</button>
+                </form>
+               
+            </div>
+            
+        </div>
+    </div>
+ 
+
+
+
+<script>
+    let productImg = document.getElementById("productImg");
+    let btns = document.getElementsByClassName("btn");
+
+    btns[0].onclick = function() {
+        productImg.src = "image/photo3.jpg";
+       
+        for(bt of btn){
+            bt.classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+    btns[1].onclick = function() {
+        productImg.src = "image/photo2.jpg";
+
+       for(bt of btn){
+            bt.classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+    btns[2].onclick = function() {
+        productImg.src = "image/photo11.jpg";
+
+       for(bt of btn){
+            bt.classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+</script>
+</body>
+</html>
