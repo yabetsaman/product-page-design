@@ -13,11 +13,16 @@
     align-items: center;
     background: #d0eaff;
    
+     height: 100vh;
 }
 .product{
     width: 100%;
     max-width: 750px;
     display: flex;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 10px;
    
    
 }
@@ -166,7 +171,10 @@ form button{
      color: #fff;
      font-size: 17px;
      width: 100%;
-     padding: 10px;
+     /*padding: 10px;*/
+     padding: 12px 25px;
+     transition: 0.3s;
+
      border-radius: 30px;
       border: 0;
       outline: 0;
@@ -175,6 +183,12 @@ form button{
     cursor: pointer;
     
 }
+
+button:hover{
+  background: orange;
+  transform: scale(1.05);
+}
+
 
 
 .controls{
@@ -198,5 +212,11 @@ form button{
 .btn.active{
     background:#553ff0;
 }
-/*
+
+
+@media (max-width: 768px){
+  .container{
+    flex-direction: column;
+  }
+}
 
